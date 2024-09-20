@@ -1,0 +1,47 @@
+body {
+  background: bisque;
+  font-family: "Gugi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 25px;
+}
+
+hr {
+  border: dotted wheat;
+  padding: 2px;
+  background: salmon;
+  width: 200px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  width: 150px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  width: 100px;
+}
+
+
+#img {
+  float:left;
+  margin: 20px;
+}
+
+img {
+  margin: auto;
+  width: 150px;
+}

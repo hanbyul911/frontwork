@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* @import url(css/mystyle.css); */
+  </style>
 </head>
+
 <body>
   <!-- <a href="https://www.google.com">구글</a> -->
   <!-- <a href="http://www.naver.com" target="_blank" rel="noopener noreferrer">네이버</a> -->
-  <ul>
-    <li><a href="#info">레드향</a></li>
-    <li><a href="#recipe">샐러드 레시피</a></li>
-    <li><a href="#product">상품구성</a></li>
-  </ul>
-  
+  <nav>
+    <ul>
+      <li class="list" id="test"><a href="#info">레드향</a></li>
+      <li class="list"><a href="#recipe">샐러드 레시피</a></li>
+      <li class="list"><a href="#product">상품구성</a></li>
+    </ul>
+  </nav>
+  <i class="fa-solid fa-web-awesome" style="font-size: 50px;"></i>
   <h1 id="info">레드향</h1>
   <hr>
-  <img src="images/tangerines.jpg" alt="레드향" width="30%">
+  <div id="img">
+    <img src="images/tangerines.jpg" class="inimg" alt="레드향" width="30%">
+  </div>
   <p>껍질에 붉은 빛이 돌아 <i>레드향</i>이라 불린다. <br>
     <strong> 레드향은 일반 귤보다 <br></strong>
     2~3배 크고, <br>
@@ -24,13 +38,12 @@
   </p>
   <h2 id="recipe">레드향 샐러드 레시피</h2>
   <video src="medias/salad.mp4" controls width="570" poster="images/salad.jpg" autoplay muted loop></video>
-  <ol>
-    <li>샐러드 채소를 씻고 물기를 제거한 후 준비합니다.</li>
-    <li>레드향과 아보카도, 토마토를 먹기 좋은 크기로 썰어둡니다.</li>
-    <li>드레싱 재료를 믹서에 갈아줍니다.</li>
-    <li>볼에 샐러드 채소와 썰어 둔 레드향, 아보카도, 토마토를 넣고 드레싱을 뿌리면 끝!</li>
+  <li>샐러드 채소를 씻고 물기를 제거한 후 준비합니다.</li>
+  <li>레드향과 아보카도, 토마토를 먹기 좋은 크기로 썰어둡니다.</li>
+  <li>드레싱 재료를 믹서에 갈아줍니다.</li>
+  <li>볼에 샐러드 채소와 썰어 둔 레드향, 아보카도, 토마토를 넣고 드레싱을 뿌리면 끝!</li>
   </ol>
-  <h2 id="product">상품 구성</h2>
+  <h2 id="product" style="color : red; font-size: 50px; font-style: italic;">상품 구성</h2>
   <table>
     <caption>상품구성</caption>
     <tr>
@@ -39,25 +52,25 @@
       <th>개수</th>
       <th>가격</th>
     </tr>
-    <tr>
+    <tr class="row">
       <th>선물용</th>
       <th>3kg</th>
       <th>11~16과</th>
       <th>35,000원</th>
     </tr>
-    <tr>
+    <tr class="row">
       <th>선물용</th>
       <th>5kg</th>
       <th>18~26과</th>
       <th>52,000원</th>
     </tr>
-    <tr>
+    <tr class="row">
       <th>가정용</th>
       <th>3kg</th>
       <th>11~16과</th>
       <th>30,000원</th>
     </tr>
-    <tr>
+    <tr class="row">
       <th>가정용</th>
       <th>5kg</th>
       <th>18~26과</th>
@@ -65,4 +78,5 @@
     </tr>
   </table>
 </body>
+
 </html>

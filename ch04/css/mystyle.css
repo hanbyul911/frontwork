@@ -1,0 +1,78 @@
+* {
+  padding: 10px;
+  margin: 10px;
+}
+
+body {
+  color: blue;
+  background-color: bisque;
+  font-family: "Gugi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2 {
+  color: green;
+}
+
+#info {
+  color: black;
+}
+
+#test {
+  background-color: pink;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list {
+  background-color: white;
+  display: inline-block; //*자동으로 list 속성이 사라짐*/
+  width: 150px;
+  text-align-last: center;
+}
+
+/* .list:hover {
+  background-color: red;
+} */
+
+nav ul li:hover {
+  background-color: palevioletred;
+}
+
+.row th:hover{
+  background-color: orange;
+}
+
+/* .row>th:hover {
+  background-color: white;
+} */
+
+table {
+  caption-side: bottom;
+  border: 1px solid black;
+  border-collapse: collapse; /* 테이블 내 클래스 간에 영향을 주지 않음, 하나로 취급함 */
+}
+
+th {
+border: 1px dotted black; 
+padding: 10px; 
+text-align: center;
+}
+
+#img {
+  width: 300px;
+  height: 200px;
+  margin: auto;
+}
+
+.inimg {
+  /* border: solid  blue; */
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
