@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container>.items:nth-child(even) {
+      background-color: orange;
+    }
+
+    #container {
+      display: grid;
+      /*절댓값을 넣지 않고 fr으로 나누면 반응형 사이트 만들수 있당*/
+      /*grid-template-columns: 1fr 2fr 3fr;*/
+      grid-template-columns: repeat(3, 2fr);
+      /*grid-template-rows: 1fr 2fr;*/
+      /*row마다 옵션을 줘야한다. 반응형이 아니라 안의 내용과 무관하게 사이즈 지정해줄때 사용
+      안의 내용이 뚫고 나옴*/
+      grid-template-rows: minmax(50px, auto) minmax(200px, auto);
+      gap: 20px 30px;
+      /* 행 간격 20px, 열 간격 30px */
+      padding: 10px;
+    }
+
+    .items {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="items">집에가고싶어용.</div>
+    <div class="items">
+      집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.집에가고싶어용.
+    </div>
+    <div class="items">졸리다졸리다</div>
+    <div class="items">4</div>
+    <div class="items">5</div>
+    <div class="items">6</div>
+  </div>
+
+</body>
+
+</html>

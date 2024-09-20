@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin : 10px;
+    }
+
+    /* top 버튼같은거 만들때 좋지 않을까 */
+    #fixed {
+      position: fixed;
+      bottom : 30px;
+      right: 30px;
+      background-color: aqua;
+    }
+
+    #relative:hover {
+      position : relative;
+      left: 20px;
+      top: 20px;
+      background-color: blue;
+    }
+
+    #absolute {
+      position: absolute;
+      top: 100px;
+      left : 100px;
+      background-color: green;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="static"></div>
+  <div id="relative"></div>
+  <div id="absolute"></div>
+  <div id="fixed"></div>
+  <div id=""></div>
+</body>
+</html>
