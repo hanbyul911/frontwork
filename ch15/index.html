@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let name = prompt("이름을 입력하세요");
+    let age = 20;
+    if (name) // truthy
+    {
+      document.write(age + "살인 " + name + "님 환영합니다.</h1>");
+      document.write(`${age}살인 ${name}님 환영합니다.`)
+      console.log(name + "님 환영합니다.")
+    } else // falsy : null, undefined
+    {
+      document.write("안녕하세요!")
+      console.log("안녕하세요!")
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

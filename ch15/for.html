@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    2 * 1 = 2;
+    */
+   let count = prompt("구구단을 반복할 횟수를 입력하세요.");
+   count = parseInt(count); // 느슨한 타입체크가 가능해서 굳이 parse 하지 않아도 된다.
+    document.write('<ul>')
+    for(let i = 0; i < count; i++) {
+      document.write(`<li>2 * ${i + 1} = ${(2 * (i + 1))}</li>`);
+    }
+    document.write('</ul>')
+  </script>
+</body>
+</html>

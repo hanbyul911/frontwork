@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let account = new Object();
+    account.name = "홍길동";
+    account.number = "1111";
+    account.balance = 10000;
+
+    let account2 = new Object();
+    account2.name = "한별";
+    account2.number = "0911";
+    account2.balance = 1233322222;
+
+    alert(`${account.name}의 계좌 ${account.number}의 잔고는 ${account.balance}원 입니다.`);
+    document.write(`${account2["name"]}의 계좌 ${account2["number"]}의 잔고는 ${account2["balance"]}원 입니다.<br>`)
+
+    // json 객체
+    let account3 = {
+      name: "이주연",
+      number: "0115",
+      balance: 980115,
+
+      withdraw: function (money) {
+        if (money <= 20000) {
+          this.balance -= money;
+        }
+        return money;
+      }
+    }
+
+    document.write(`${account3["name"]}의 계좌 ${account3["number"]}의 잔고는 ${account3["balance"]}원 입니다.`)
+    console.log(`${account3.withdraw(10000)}원을 인출하였고 잔액은 `);
+    console.log(`${account3.balance}원입니다.<br>`);
+
+    function Account(name, number, balance) {
+      this.name = name;
+      this.number = number;
+      this.balance = balance;
+
+      this.withdraw = (money) => {
+        if (money <= 20000) {
+          this.balance -= money;
+        } return money;
+      }
+    }
+
+    let account4 = new Account("이재현", "970913", 12345678);
+    document.write(`${account4.name}의 계좌 ${account4.number}의 잔고는 ${account4.balance}원 입니다.`)
+
+
+  </script>
+</body>
+
+</html>
