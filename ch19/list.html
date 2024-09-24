@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="todo" name="value">
+  <button onclick="addNewList()">
+    리스트 추가하기
+  </button>
+  <button onclick="removeLastList()">마지막 리스트 삭제하기</button>
+  <ul id="parent">
+  </ul>
+  <script>
+    function addNewList() {
+      let newList = document.createElement("li");
+      newList.setAttribute("class", "list");
+      newList.innerText = document.querySelector('#todo').value;
+      
+      let btn = document.createElement("button");
+      btn.innerText = "X";
+      btn.addEventListener("click", function(){removeList(newList)}); // callback
+      newList.appendChild(btn);
+      let parent = document.querySelector('#parent');
+      parent.appendChild(newList);
+    }
+
+    function removeLastList() {
+      let parent = document.querySelector('#parent');
+      // null exception 체크해줘야함
+      if (parent && parent.lastChild) {
+        parent.removeChild(parent.lastChild);
+      } else {
+        alert("모든 리스트가 삭제되었습니다.")
+      }
+    }
+
+    function removeList(btn) {
+      let list = btn.parentElement;
+      list.parentElement.removeChild(list);
+    }
+  </script>
+</body>
+</html>

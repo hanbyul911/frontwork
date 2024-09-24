@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="text"></p>
+  <button onclick="showText(), this.innerHTML = '바꼈습니다.';">눌러주세용</button>
+  <script>
+    function showText() {
+      let text = document.querySelector("#text");
+      // text.innerText = "<h1>나타나라 텍스트</h1>"; 텍스트만 바꾸면 단순히 텍스트만 들어가진다.
+      text.innerHTML = "<h1>나타나라 텍스트</h1>"; // innerHTML 로 입력해야 원하는대로 html 속성이 변경됨
+    }
+  </script>
+</body>
+</html>

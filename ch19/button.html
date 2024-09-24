@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="colorChange(this, 'red')">클릭</button>
+  <button onclick="colorChange(this, 'blue')">클릭하면 버튼의 색이 변경돼요.</button>
+  <script>
+    function colorChange(element, color) {
+      if (element.style.backgroundColor == color) {
+        element.style.backgroundColor = 'lightgray';
+        element.style.color = 'black';
+      } else {
+        element.style.backgroundColor = color;
+        element.style.color = 'white';
+      }
+    }
+  </script>
+</body>
+
+</html>
