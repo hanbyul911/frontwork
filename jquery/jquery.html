@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    function addClass() {
+      // let titleE = document.getElementsByClassName("title");
+      // for (let key in titleE) {
+      //     titleE.className = titleE.calssName = " selected"
+      // }
+      // console.log(titleE);
+      $(".title").addClass("selected");
+    }
+
+    function hide() {
+      $(".title").hide();
+    }
+
+    function changeColor() {
+      $(".title").css('backgroundColor', 'yellow');
+      $('div').html('<h1>hi</h1>');
+    }
+
+    // $(function call() {
+    //     $('#btn').click(() => {
+    //       $('button').hide();
+    // }); // $(document).readay(function ~~)
+    $(() => {
+      $('#btn').click(() => {
+        $('button').hide();
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div class="title">1</div>
+  <div class="title">2</div>
+  <button onclick="addClass()">클래스 추가</button>
+  <button onclick="hide()">숨기기</button>
+  <button onclick="changeColor()">배경색 바꾸기</button>
+  <button id="btn">call</button>
+  <!-- <script>
+    function addClass() {
+      // let titleE = document.getElementsByClassName("title");
+      // for (let key in titleE) {
+      //     titleE.className = titleE.calssName = " selected"
+      // }
+      // console.log(titleE);
+      $(".title").addClass("selected");
+    }
+
+    function hide() {
+      $(".title").hide();
+    }
+
+    function changeColor() {
+      $(".title").css('backgroundColor', 'yellow');
+      $('div').html('<h1>hi</h1>');
+    }
+
+    $(".title").css('backgroundColor', 'yellow');
+  </script> -->
+</body>
+
+</html>
