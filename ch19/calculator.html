@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script>
+    function calculate() {
+      var exp = document.getElementById("exp");
+      var result = document.getElementById("result");
+      result.value = eval(exp.value);
+    }
+  </script> -->
+</head>
+<body>
+  <h3>onclick, 계산기 만들기</h3>
+  <hr>
+  계산하고자 하는 수식을 입력하고 계산버튼을 누르시오. 
+  <br><br>
+  <form>
+    <label for="exp">식</label> <input type="text" name="exp" id="exp" value=""><br>
+    <label for="result">값</label> <input type="text" name="result" id="result" readonly>
+    <!-- <input type="button" value=" 계산 " onclick="calculate()"> -->
+     <input type="submit" value=" 계산 " onclick="calculate(event)">
+  </form>
+
+  <script>
+    function calculate(e) {
+      e.preventDefault() // submit 되면 다시 창이 재실행되는데 이를 막기 위한 장치
+      let exp = document.getElementById("exp");
+      let result = document.getElementById("result");
+      let value = eval(exp.value);
+      if (value) {
+        result.value = value;
+      } else {
+        alert("잘못된 값을 입력하였습니다.")
+        result.value = "";
+      }
+    }
+  </script>
+</body>
+</html>

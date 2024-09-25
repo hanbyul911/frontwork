@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h3>onsubmit</h3>
+  <hr>
+  이름과 학번을 입력하고 클릭 버튼을 누르세요
+  <form action="#" onsubmit="return login(event)">
+    아이디 <input type="text" id="id" required><br>
+    패스워드 <input type="password" id="password" required>
+    <input type="submit" value="login"></button>
+    <p id="error"></p>
+  </form>
+  <script>
+    var idArray = ['aaa', 'bbb', 'ccc'];
+
+    function login(event) {
+      event.preventDefault();
+      let id = document.querySelector('#id').value;
+      let pw = document.querySelector('#password').value;
+      let error = document.querySelector('#error');
+      let tf = false;
+      for (const id of idArray) {
+          if (pw == '1111') {
+            alert(id + "님 반갑습니다.");
+            tf = true;
+            break;
+          } else {
+            error.innerHTML = "비밀번호를 잘못 입력하였습니다.";
+            return false;
+          }
+      }
+      if (!tf) {
+        error.innerHTML = "아이디가 존재하지 않습니다.";
+      } else {
+        error.innerHTML ="";
+      }
+
+      return tf;
+    }
+
+
+  </script>
+</body>
+
+</html>

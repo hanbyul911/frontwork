@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>물품을 선택하면 금액이 자동 계산됩니다.</h1>
+  <hr>
+  <form action="#">
+    <input type="checkbox" value="10000" name="prod" id="hat" onclick="cal2(this)"><label for="hat">모자 1만원</label>
+    <input type="checkbox" value="30000" name="prod" id="shoe" onclick="cal2(this)"><label for="shoe">구두 3만원</label>
+    <input type="checkbox" value="80000" name="prod" id="bag" onclick="cal2(this)"><label for="bag">가방 8만원</label>
+    <br>
+    지불하실 금액 <input type="text" id="amount" value="0" readonly>
+  </form>
+  <script>
+    // form 전체 onclick 으로 쓸 때
+    function cal(e) {
+      let amount = 0;
+      let prod = document.getElementsByName("prod");
+      let result = document.getElementById("amount")
+
+      for (let i = 0; i < prod.length; i++) {
+        if (prod[i].checked) {
+          amount = parseInt(amount) + parseInt(prod[i].value);
+        }
+      }
+
+      result.value = amount;
+    }
+
+    // 전역변수를 선언하여 빼고 각 버튼마다 onclick 이벤트를 발생시켜서 더하고 빼고 해도 됨.
+    var sum = 0;
+    function cal2(element) {
+      if (element.checked) {
+        sum += parseInt(element.value);
+      } else {
+        sum -= parseInt(element.value);
+      }
+
+      document.getElementById("amount").value = sum;
+    }
+  </script>
+</body>
+
+</html>

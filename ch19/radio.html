@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>버튼을 클릭하면 선택된 라디오 버튼의 value를 출력합니다.</h1>
+  <hr>
+  <form action="#">
+    <label for="seoul">서울</label><input type="radio" name="city" id="seoul" value="seoul">
+    <label for="busan">부산</label><input type="radio" name="city" id="busan" value="busan">
+    <label for="chunchen">춘천</label><input type="radio" name="city" id="chunchen" value="chunchen">
+    <button onclick="show(event)">선택된 도시 확인하기</button>
+  </form>
+  <script>
+    function show(e) {
+      e.preventDefault;
+      let fount = null;
+      //let selectedCity = document.getElementsByName("city");
+      let selectedCity = document.querySelectorAll('[name=city]');
+      for (let i = 0; i < selectedCity.length; i++) {
+        if (selectedCity[i].checked == true) {
+          found = selectedCity[i];
+        }
+      }
+
+      if (found != null) {
+        alert(found.value + "이(가) 선택되었습니다.");
+      } else {
+        alert("선택된 도시가 없습니다.")
+      }
+    }
+  </script>
+</body>
+</html>
